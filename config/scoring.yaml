@@ -1,0 +1,26 @@
+completeness:
+  base_score: 1.0
+  missing_required_penalty: 0.25
+  missing_telemetry_field_penalty: 0.05
+  unconvertible_field_penalty: 0.10
+  stale_field_penalty: 0.10
+  ambiguous_unit_penalty: 0.08
+  min_completeness_floor: 0.0
+
+confidence_weights:
+  supporting_metric_weight: 0.4
+  contradicting_metric_penalty: 0.5
+  data_quality_weight: 0.3
+  topology_relevance_weight: 0.3
+
+cause_priors:
+  LINK_CONGESTION: 0.20
+  WEAK_WIFI_SIGNAL: 0.25
+  INTERFACE_FAULT: 0.10
+  DEVICE_CPU_OVERLOAD: 0.10
+  UPSTREAM_CONGESTION: 0.10
+  DNS_FAILURE: 0.10
+  DHCP_FAILURE: 0.05
+  HARDWARE_FAILURE: 0.05
+  NORMAL: 0.05
+  UNKNOWN: 0.0

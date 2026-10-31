@@ -1,0 +1,117 @@
+[
+  {
+    "device_id": "SRV_DHCP_01",
+    "device_type": "server",
+    "timestamp": "2026-10-31T10:00:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 10000.0,
+      "latency_ms": 12.58,
+      "jitter_ms": 1.4,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 37.79,
+      "cpu_pct": 21.05,
+      "memory_pct": 49.07,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 0.31,
+      "device_status": "degraded",
+      "throughput_mbps": 3779.0,
+      "dns_resolution_ms": 18.67,
+      "dhcp_failures": 77
+    }
+  },
+  {
+    "device_id": "SRV_DHCP_01",
+    "device_type": "server",
+    "timestamp": "2026-10-31T10:01:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 10000.0,
+      "latency_ms": 7.86,
+      "jitter_ms": 3.42,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 36.43,
+      "cpu_pct": 24.86,
+      "memory_pct": 38.31,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 0.94,
+      "device_status": "degraded",
+      "throughput_mbps": 3643.0,
+      "dns_resolution_ms": 15.79,
+      "dhcp_failures": 165
+    }
+  },
+  {
+    "device_id": "SRV_DHCP_01",
+    "device_type": "server",
+    "timestamp": "2026-10-31T10:02:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 10000.0,
+      "latency_ms": 7.86,
+      "jitter_ms": 1.65,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 21.83,
+      "cpu_pct": 16.27,
+      "memory_pct": 42.48,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 0.28,
+      "device_status": "degraded",
+      "throughput_mbps": 2183.0,
+      "dns_resolution_ms": 9.8,
+      "dhcp_failures": 175
+    }
+  },
+  {
+    "device_id": "SRV_DHCP_01",
+    "device_type": "server",
+    "timestamp": "2026-10-31T10:03:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 10000.0,
+      "latency_ms": 9.5,
+      "jitter_ms": 2.02,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 28.44,
+      "cpu_pct": 31.83,
+      "memory_pct": 39.08,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 0.81,
+      "device_status": "degraded",
+      "throughput_mbps": 2844.0,
+      "dns_resolution_ms": 21.1,
+      "dhcp_failures": 107
+    }
+  },
+  {
+    "device_id": "SRV_DHCP_01",
+    "device_type": "server",
+    "timestamp": "2026-10-31T10:04:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 10000.0,
+      "latency_ms": 13.58,
+      "jitter_ms": 2.06,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 30.94,
+      "cpu_pct": 19.0,
+      "memory_pct": 46.92,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 1.03,
+      "device_status": "degraded",
+      "throughput_mbps": 3094.0,
+      "dns_resolution_ms": 16.51,
+      "dhcp_failures": 41
+    }
+  }
+]

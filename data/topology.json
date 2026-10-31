@@ -1,0 +1,438 @@
+{
+  "name": "IIT Bhubaneswar Campus Network",
+  "version": "1.0",
+  "node_count": 22,
+  "edge_count": 26,
+  "nodes": [
+    {
+      "device_id": "ACC_SW_CSE_01",
+      "device_type": "access_switch",
+      "segment": "dept_ethernet",
+      "location": "School of Electrical Sciences (CSE Wing)",
+      "ip_address": "10.10.21.1",
+      "bandwidth_mbps": 1000.0,
+      "model": "Cisco Catalyst 9200",
+      "id": "ACC_SW_CSE_01"
+    },
+    {
+      "device_id": "ACC_SW_ECE_01",
+      "device_type": "access_switch",
+      "segment": "dept_ethernet",
+      "location": "School of Electrical Sciences (ECE Wing)",
+      "ip_address": "10.10.22.1",
+      "bandwidth_mbps": 1000.0,
+      "model": "Cisco Catalyst 9200",
+      "id": "ACC_SW_ECE_01"
+    },
+    {
+      "device_id": "ACC_SW_HOSTEL_A",
+      "device_type": "access_switch",
+      "segment": "hostel_wifi",
+      "location": "Hostel Block A (MHR)",
+      "ip_address": "10.10.11.1",
+      "bandwidth_mbps": 1000.0,
+      "model": "Cisco Catalyst 9200",
+      "id": "ACC_SW_HOSTEL_A"
+    },
+    {
+      "device_id": "ACC_SW_HOSTEL_B",
+      "device_type": "access_switch",
+      "segment": "hostel_wifi",
+      "location": "Hostel Block B (Subhadra Hall)",
+      "ip_address": "10.10.12.1",
+      "bandwidth_mbps": 1000.0,
+      "model": "Cisco Catalyst 9200",
+      "id": "ACC_SW_HOSTEL_B"
+    },
+    {
+      "device_id": "ACC_SW_LHC_01",
+      "device_type": "access_switch",
+      "segment": "lhc",
+      "location": "Lecture Hall Complex Ground Floor",
+      "ip_address": "10.10.23.1",
+      "bandwidth_mbps": 1000.0,
+      "model": "Cisco Catalyst 9200",
+      "id": "ACC_SW_LHC_01"
+    },
+    {
+      "device_id": "ACC_SW_LIB_01",
+      "device_type": "access_switch",
+      "segment": "dept_ethernet",
+      "location": "Central Library Switch Room",
+      "ip_address": "10.10.24.1",
+      "bandwidth_mbps": 1000.0,
+      "model": "Cisco Catalyst 9200",
+      "id": "ACC_SW_LIB_01"
+    },
+    {
+      "device_id": "AP_HOSTEL_A_FL1",
+      "device_type": "access_point",
+      "segment": "hostel_wifi",
+      "location": "Hostel A Floor 1 Corridor",
+      "ip_address": "10.10.11.101",
+      "bandwidth_mbps": 1000.0,
+      "model": "Aruba AP-535 Wi-Fi 6",
+      "id": "AP_HOSTEL_A_FL1"
+    },
+    {
+      "device_id": "AP_HOSTEL_A_FL2",
+      "device_type": "access_point",
+      "segment": "hostel_wifi",
+      "location": "Hostel A Floor 2 Corridor",
+      "ip_address": "10.10.11.102",
+      "bandwidth_mbps": 1000.0,
+      "model": "Aruba AP-535 Wi-Fi 6",
+      "id": "AP_HOSTEL_A_FL2"
+    },
+    {
+      "device_id": "AP_HOSTEL_B_FL1",
+      "device_type": "access_point",
+      "segment": "hostel_wifi",
+      "location": "Hostel B Floor 1 Corridor",
+      "ip_address": "10.10.12.101",
+      "bandwidth_mbps": 1000.0,
+      "model": "Aruba AP-535 Wi-Fi 6",
+      "id": "AP_HOSTEL_B_FL1"
+    },
+    {
+      "device_id": "AP_LHC_ROOM101",
+      "device_type": "access_point",
+      "segment": "lhc",
+      "location": "LHC Room 101 Lecture Hall",
+      "ip_address": "10.10.23.101",
+      "bandwidth_mbps": 1000.0,
+      "model": "Aruba AP-555 High-Density",
+      "id": "AP_LHC_ROOM101"
+    },
+    {
+      "device_id": "AP_LIB_READING",
+      "device_type": "access_point",
+      "segment": "dept_ethernet",
+      "location": "Central Library Main Reading Hall",
+      "ip_address": "10.10.24.101",
+      "bandwidth_mbps": 1000.0,
+      "model": "Aruba AP-535 Wi-Fi 6",
+      "id": "AP_LIB_READING"
+    },
+    {
+      "device_id": "CORE_RTR_01",
+      "device_type": "core_router",
+      "segment": "core",
+      "location": "Main Datacenter (CC)",
+      "ip_address": "10.10.0.1",
+      "bandwidth_mbps": 10000.0,
+      "model": "Cisco Catalyst 9600",
+      "id": "CORE_RTR_01"
+    },
+    {
+      "device_id": "CORE_RTR_02",
+      "device_type": "core_router",
+      "segment": "core",
+      "location": "Backup Datacenter (Admin)",
+      "ip_address": "10.10.0.2",
+      "bandwidth_mbps": 10000.0,
+      "model": "Cisco Catalyst 9600",
+      "id": "CORE_RTR_02"
+    },
+    {
+      "device_id": "DIST_SW_ACAD",
+      "device_type": "distribution_switch",
+      "segment": "dept_ethernet",
+      "location": "Academic Complex Block 1",
+      "ip_address": "10.10.20.1",
+      "bandwidth_mbps": 10000.0,
+      "model": "Cisco Catalyst 9500",
+      "id": "DIST_SW_ACAD"
+    },
+    {
+      "device_id": "DIST_SW_ADMIN",
+      "device_type": "distribution_switch",
+      "segment": "admin",
+      "location": "Administrative Building",
+      "ip_address": "10.10.30.1",
+      "bandwidth_mbps": 10000.0,
+      "model": "Cisco Catalyst 9500",
+      "id": "DIST_SW_ADMIN"
+    },
+    {
+      "device_id": "DIST_SW_DATACENTER",
+      "device_type": "distribution_switch",
+      "segment": "datacenter",
+      "location": "Main Datacenter Server Farm",
+      "ip_address": "10.10.40.1",
+      "bandwidth_mbps": 10000.0,
+      "model": "Nexus 9300",
+      "id": "DIST_SW_DATACENTER"
+    },
+    {
+      "device_id": "DIST_SW_HOSTEL",
+      "device_type": "distribution_switch",
+      "segment": "hostel_wifi",
+      "location": "Hostel Cluster Node Room",
+      "ip_address": "10.10.10.1",
+      "bandwidth_mbps": 10000.0,
+      "model": "Cisco Catalyst 9500",
+      "id": "DIST_SW_HOSTEL"
+    },
+    {
+      "device_id": "GW_NKN_ISP",
+      "device_type": "uplink",
+      "segment": "uplink",
+      "location": "Campus Border / Datacenter",
+      "ip_address": "14.139.221.1",
+      "bandwidth_mbps": 20000.0,
+      "model": "Cisco ASR 9904",
+      "id": "GW_NKN_ISP"
+    },
+    {
+      "device_id": "SRV_DHCP_01",
+      "device_type": "server",
+      "segment": "datacenter",
+      "location": "Main Datacenter Rack 4",
+      "ip_address": "10.10.40.20",
+      "bandwidth_mbps": 10000.0,
+      "model": "Dell PowerEdge R650 (Primary DHCP)",
+      "id": "SRV_DHCP_01"
+    },
+    {
+      "device_id": "SRV_DHCP_02",
+      "device_type": "server",
+      "segment": "datacenter",
+      "location": "Main Datacenter Rack 5",
+      "ip_address": "10.10.40.21",
+      "bandwidth_mbps": 10000.0,
+      "model": "Dell PowerEdge R650 (Secondary DHCP)",
+      "id": "SRV_DHCP_02"
+    },
+    {
+      "device_id": "SRV_DNS_01",
+      "device_type": "server",
+      "segment": "datacenter",
+      "location": "Main Datacenter Rack 4",
+      "ip_address": "10.10.40.10",
+      "bandwidth_mbps": 10000.0,
+      "model": "Dell PowerEdge R650 (Primary DNS)",
+      "id": "SRV_DNS_01"
+    },
+    {
+      "device_id": "SRV_DNS_02",
+      "device_type": "server",
+      "segment": "datacenter",
+      "location": "Main Datacenter Rack 5",
+      "ip_address": "10.10.40.11",
+      "bandwidth_mbps": 10000.0,
+      "model": "Dell PowerEdge R650 (Secondary DNS)",
+      "id": "SRV_DNS_02"
+    }
+  ],
+  "edges": [
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "HundredGigE0/0/1",
+      "interface_v": "TenGigE1/0/1",
+      "source": "GW_NKN_ISP",
+      "target": "CORE_RTR_01"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "HundredGigE0/0/2",
+      "interface_v": "TenGigE1/0/1",
+      "source": "GW_NKN_ISP",
+      "target": "CORE_RTR_02"
+    },
+    {
+      "bandwidth_mbps": 20000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/0/48",
+      "interface_v": "TenGigE1/0/48",
+      "source": "CORE_RTR_01",
+      "target": "CORE_RTR_02"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/DIST_SW_HOSTEL",
+      "interface_v": "TenGigE0/1",
+      "source": "CORE_RTR_01",
+      "target": "DIST_SW_HOSTEL"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/DIST_SW_ACAD",
+      "interface_v": "TenGigE0/1",
+      "source": "CORE_RTR_01",
+      "target": "DIST_SW_ACAD"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/DIST_SW_ADMIN",
+      "interface_v": "TenGigE0/1",
+      "source": "CORE_RTR_01",
+      "target": "DIST_SW_ADMIN"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/DIST_SW_DATACENTER",
+      "interface_v": "TenGigE0/1",
+      "source": "CORE_RTR_01",
+      "target": "DIST_SW_DATACENTER"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/DIST_SW_HOSTEL",
+      "interface_v": "TenGigE0/2",
+      "source": "CORE_RTR_02",
+      "target": "DIST_SW_HOSTEL"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/DIST_SW_ACAD",
+      "interface_v": "TenGigE0/2",
+      "source": "CORE_RTR_02",
+      "target": "DIST_SW_ACAD"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/DIST_SW_ADMIN",
+      "interface_v": "TenGigE0/2",
+      "source": "CORE_RTR_02",
+      "target": "DIST_SW_ADMIN"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/DIST_SW_DATACENTER",
+      "interface_v": "TenGigE0/2",
+      "source": "CORE_RTR_02",
+      "target": "DIST_SW_DATACENTER"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "fiber",
+      "interface_u": "GigE1/0/1",
+      "interface_v": "GigE0/49",
+      "source": "DIST_SW_HOSTEL",
+      "target": "ACC_SW_HOSTEL_A"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "fiber",
+      "interface_u": "GigE1/0/2",
+      "interface_v": "GigE0/49",
+      "source": "DIST_SW_HOSTEL",
+      "target": "ACC_SW_HOSTEL_B"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "fiber",
+      "interface_u": "GigE1/0/1",
+      "interface_v": "GigE0/49",
+      "source": "DIST_SW_ACAD",
+      "target": "ACC_SW_CSE_01"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "fiber",
+      "interface_u": "GigE1/0/2",
+      "interface_v": "GigE0/49",
+      "source": "DIST_SW_ACAD",
+      "target": "ACC_SW_ECE_01"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "fiber",
+      "interface_u": "GigE1/0/3",
+      "interface_v": "GigE0/49",
+      "source": "DIST_SW_ACAD",
+      "target": "ACC_SW_LHC_01"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "fiber",
+      "interface_u": "GigE1/0/4",
+      "interface_v": "GigE0/49",
+      "source": "DIST_SW_ACAD",
+      "target": "ACC_SW_LIB_01"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/1",
+      "interface_v": "eth0",
+      "source": "DIST_SW_DATACENTER",
+      "target": "SRV_DNS_01"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/2",
+      "interface_v": "eth0",
+      "source": "DIST_SW_DATACENTER",
+      "target": "SRV_DNS_02"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/3",
+      "interface_v": "eth0",
+      "source": "DIST_SW_DATACENTER",
+      "target": "SRV_DHCP_01"
+    },
+    {
+      "bandwidth_mbps": 10000.0,
+      "medium": "fiber",
+      "interface_u": "TenGigE1/4",
+      "interface_v": "eth0",
+      "source": "DIST_SW_DATACENTER",
+      "target": "SRV_DHCP_02"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "cat6",
+      "interface_u": "GigE0/1",
+      "interface_v": "eth0",
+      "source": "ACC_SW_HOSTEL_A",
+      "target": "AP_HOSTEL_A_FL1"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "cat6",
+      "interface_u": "GigE0/2",
+      "interface_v": "eth0",
+      "source": "ACC_SW_HOSTEL_A",
+      "target": "AP_HOSTEL_A_FL2"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "cat6",
+      "interface_u": "GigE0/1",
+      "interface_v": "eth0",
+      "source": "ACC_SW_HOSTEL_B",
+      "target": "AP_HOSTEL_B_FL1"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "cat6",
+      "interface_u": "GigE0/1",
+      "interface_v": "eth0",
+      "source": "ACC_SW_LHC_01",
+      "target": "AP_LHC_ROOM101"
+    },
+    {
+      "bandwidth_mbps": 1000.0,
+      "medium": "cat6",
+      "interface_u": "GigE0/1",
+      "interface_v": "eth0",
+      "source": "ACC_SW_LIB_01",
+      "target": "AP_LIB_READING"
+    }
+  ]
+}

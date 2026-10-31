@@ -1,0 +1,112 @@
+[
+  {
+    "device_id": "SRV_DNS_01",
+    "device_type": "server",
+    "timestamp": "2026-10-31T10:00:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 10000.0,
+      "latency_ms": 10.22,
+      "jitter_ms": 2.29,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 31.34,
+      "cpu_pct": 21.87,
+      "memory_pct": 42.69,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 0.53,
+      "device_status": "degraded",
+      "throughput_mbps": 3134.0,
+      "dns_resolution_ms": 5220.46
+    }
+  },
+  {
+    "device_id": "SRV_DNS_01",
+    "device_type": "server",
+    "timestamp": "2026-10-31T10:01:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 10000.0,
+      "latency_ms": 6.28,
+      "jitter_ms": 1.31,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 26.6,
+      "cpu_pct": 34.31,
+      "memory_pct": 42.22,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 0.7,
+      "device_status": "degraded",
+      "throughput_mbps": 2660.0,
+      "dns_resolution_ms": 8341.8
+    }
+  },
+  {
+    "device_id": "SRV_DNS_01",
+    "device_type": "server",
+    "timestamp": "2026-10-31T10:02:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 10000.0,
+      "latency_ms": 12.81,
+      "jitter_ms": 1.69,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 33.08,
+      "cpu_pct": 22.18,
+      "memory_pct": 49.37,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 0.14,
+      "device_status": "degraded",
+      "throughput_mbps": 3308.0,
+      "dns_resolution_ms": 6969.41
+    }
+  },
+  {
+    "device_id": "SRV_DNS_01",
+    "device_type": "server",
+    "timestamp": "2026-10-31T10:03:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 10000.0,
+      "latency_ms": 13.21,
+      "jitter_ms": 2.67,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 39.05,
+      "cpu_pct": 19.77,
+      "memory_pct": 47.61,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 1.11,
+      "device_status": "degraded",
+      "throughput_mbps": 3905.0,
+      "dns_resolution_ms": 4670.53
+    }
+  },
+  {
+    "device_id": "SRV_DNS_01",
+    "device_type": "server",
+    "timestamp": "2026-10-31T10:04:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 10000.0,
+      "latency_ms": 10.35,
+      "jitter_ms": 2.15,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 33.5,
+      "cpu_pct": 20.06,
+      "memory_pct": 44.73,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 1.07,
+      "device_status": "degraded",
+      "throughput_mbps": 3350.0,
+      "dns_resolution_ms": 7996.57
+    }
+  }
+]

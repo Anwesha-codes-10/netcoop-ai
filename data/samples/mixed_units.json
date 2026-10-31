@@ -1,0 +1,62 @@
+[
+  {
+    "device_id": "DIST_SW_HOSTEL",
+    "timestamp": "2026-10-31T10:00:00+00:00",
+    "schema_version": "1.0",
+    "status": "degraded",
+    "units": {
+      "latency": "s",
+      "bandwidth": "Gbps",
+      "packet_loss": "fraction"
+    },
+    "metrics": {
+      "latency_s": 0.22,
+      "bandwidth_gbps": 10.0,
+      "packet_loss_ratio": 0.035,
+      "link_utilization_pct": "95.5%",
+      "throughput_mbps": "9550Mbps",
+      "queue_drops": 600,
+      "cpu_pct": 45.0
+    }
+  },
+  {
+    "device_id": "DIST_SW_HOSTEL",
+    "timestamp": "2026-10-31T10:01:00+00:00",
+    "schema_version": "1.0",
+    "status": "degraded",
+    "units": {
+      "latency": "s",
+      "bandwidth": "Gbps",
+      "packet_loss": "fraction"
+    },
+    "metrics": {
+      "latency_s": 0.22,
+      "bandwidth_gbps": 10.0,
+      "packet_loss_ratio": 0.035,
+      "link_utilization_pct": "95.5%",
+      "throughput_mbps": "9550Mbps",
+      "queue_drops": 600,
+      "cpu_pct": 45.0
+    }
+  },
+  {
+    "device_id": "DIST_SW_HOSTEL",
+    "timestamp": "2026-10-31T10:02:00+00:00",
+    "schema_version": "1.0",
+    "status": "degraded",
+    "units": {
+      "latency": "s",
+      "bandwidth": "Gbps",
+      "packet_loss": "fraction"
+    },
+    "metrics": {
+      "latency_s": 0.22,
+      "bandwidth_gbps": 10.0,
+      "packet_loss_ratio": 0.035,
+      "link_utilization_pct": "95.5%",
+      "throughput_mbps": "9550Mbps",
+      "queue_drops": 600,
+      "cpu_pct": 45.0
+    }
+  }
+]

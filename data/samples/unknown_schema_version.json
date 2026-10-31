@@ -1,0 +1,11 @@
+[
+  {
+    "device_id": "CORE_RTR_01",
+    "timestamp": "2026-10-31T10:00:00+00:00",
+    "schema_version": "2.5-beta",
+    "metrics": {
+      "latency_ms": 10.0,
+      "link_utilization_pct": 20.0
+    }
+  }
+]

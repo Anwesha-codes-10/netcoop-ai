@@ -1,0 +1,107 @@
+[
+  {
+    "device_id": "ACC_SW_CSE_01",
+    "device_type": "access_switch",
+    "timestamp": "2026-10-31T10:00:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 25.91,
+      "jitter_ms": 2.2,
+      "packet_loss_pct": 9.38,
+      "link_utilization_pct": 34.72,
+      "cpu_pct": 32.2,
+      "memory_pct": 38.43,
+      "queue_drops": 0,
+      "interface_errors": 1395,
+      "retransmission_pct": 22.04,
+      "device_status": "degraded",
+      "throughput_mbps": 347.2
+    }
+  },
+  {
+    "device_id": "ACC_SW_CSE_01",
+    "device_type": "access_switch",
+    "timestamp": "2026-10-31T10:01:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 27.79,
+      "jitter_ms": 2.9,
+      "packet_loss_pct": 13.68,
+      "link_utilization_pct": 21.36,
+      "cpu_pct": 15.62,
+      "memory_pct": 43.23,
+      "queue_drops": 0,
+      "interface_errors": 875,
+      "retransmission_pct": 24.02,
+      "device_status": "degraded",
+      "throughput_mbps": 213.6
+    }
+  },
+  {
+    "device_id": "ACC_SW_CSE_01",
+    "device_type": "access_switch",
+    "timestamp": "2026-10-31T10:02:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 35.1,
+      "jitter_ms": 2.44,
+      "packet_loss_pct": 10.19,
+      "link_utilization_pct": 23.9,
+      "cpu_pct": 24.31,
+      "memory_pct": 36.11,
+      "queue_drops": 0,
+      "interface_errors": 1314,
+      "retransmission_pct": 16.49,
+      "device_status": "degraded",
+      "throughput_mbps": 239.0
+    }
+  },
+  {
+    "device_id": "ACC_SW_CSE_01",
+    "device_type": "access_switch",
+    "timestamp": "2026-10-31T10:03:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 34.05,
+      "jitter_ms": 3.15,
+      "packet_loss_pct": 12.72,
+      "link_utilization_pct": 23.83,
+      "cpu_pct": 26.89,
+      "memory_pct": 48.15,
+      "queue_drops": 0,
+      "interface_errors": 1142,
+      "retransmission_pct": 12.76,
+      "device_status": "degraded",
+      "throughput_mbps": 238.3
+    }
+  },
+  {
+    "device_id": "ACC_SW_CSE_01",
+    "device_type": "access_switch",
+    "timestamp": "2026-10-31T10:04:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 28.47,
+      "jitter_ms": 1.61,
+      "packet_loss_pct": 4.65,
+      "link_utilization_pct": 22.87,
+      "cpu_pct": 19.96,
+      "memory_pct": 44.15,
+      "queue_drops": 0,
+      "interface_errors": 843,
+      "retransmission_pct": 14.26,
+      "device_status": "degraded",
+      "throughput_mbps": 228.7
+    }
+  }
+]

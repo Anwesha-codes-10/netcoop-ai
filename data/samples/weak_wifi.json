@@ -1,0 +1,222 @@
+[
+  {
+    "device_id": "AP_HOSTEL_A_FL2",
+    "device_type": "access_point",
+    "timestamp": "2026-10-31T10:00:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 209.26,
+      "jitter_ms": 50.79,
+      "packet_loss_pct": 6.49,
+      "link_utilization_pct": 22.05,
+      "cpu_pct": 21.77,
+      "memory_pct": 36.09,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 39.37,
+      "device_status": "degraded",
+      "throughput_mbps": 220.5,
+      "rssi_dbm": -83.8,
+      "snr_db": 8.2
+    }
+  },
+  {
+    "device_id": "AP_HOSTEL_A_FL2",
+    "device_type": "access_point",
+    "timestamp": "2026-10-31T10:01:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 202.68,
+      "jitter_ms": 36.09,
+      "packet_loss_pct": 5.99,
+      "link_utilization_pct": 37.93,
+      "cpu_pct": 16.5,
+      "memory_pct": 41.12,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 27.16,
+      "device_status": "degraded",
+      "throughput_mbps": 379.3,
+      "rssi_dbm": -83.6,
+      "snr_db": 13.8
+    }
+  },
+  {
+    "device_id": "AP_HOSTEL_A_FL2",
+    "device_type": "access_point",
+    "timestamp": "2026-10-31T10:02:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 183.95,
+      "jitter_ms": 25.59,
+      "packet_loss_pct": 8.86,
+      "link_utilization_pct": 38.64,
+      "cpu_pct": 28.21,
+      "memory_pct": 48.01,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 45.97,
+      "device_status": "degraded",
+      "throughput_mbps": 386.4,
+      "rssi_dbm": -88.6,
+      "snr_db": 13.5
+    }
+  },
+  {
+    "device_id": "AP_HOSTEL_A_FL2",
+    "device_type": "access_point",
+    "timestamp": "2026-10-31T10:03:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 188.75,
+      "jitter_ms": 43.22,
+      "packet_loss_pct": 14.45,
+      "link_utilization_pct": 27.34,
+      "cpu_pct": 23.29,
+      "memory_pct": 47.53,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 25.67,
+      "device_status": "degraded",
+      "throughput_mbps": 273.4,
+      "rssi_dbm": -82.8,
+      "snr_db": 11.7
+    }
+  },
+  {
+    "device_id": "AP_HOSTEL_A_FL2",
+    "device_type": "access_point",
+    "timestamp": "2026-10-31T10:04:00+00:00",
+    "status": "degraded",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 235.74,
+      "jitter_ms": 47.57,
+      "packet_loss_pct": 8.62,
+      "link_utilization_pct": 24.57,
+      "cpu_pct": 27.44,
+      "memory_pct": 35.75,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 35.1,
+      "device_status": "degraded",
+      "throughput_mbps": 245.7,
+      "rssi_dbm": -86.5,
+      "snr_db": 9.7
+    }
+  },
+  {
+    "device_id": "ACC_SW_HOSTEL_A",
+    "device_type": "access_switch",
+    "timestamp": "2026-10-31T10:00:00+00:00",
+    "status": "up",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 12.22,
+      "jitter_ms": 2.99,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 32.34,
+      "cpu_pct": 17.97,
+      "memory_pct": 35.34,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 1.17,
+      "device_status": "up",
+      "throughput_mbps": 323.4
+    }
+  },
+  {
+    "device_id": "ACC_SW_HOSTEL_A",
+    "device_type": "access_switch",
+    "timestamp": "2026-10-31T10:01:00+00:00",
+    "status": "up",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 16.13,
+      "jitter_ms": 1.29,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 35.27,
+      "cpu_pct": 30.7,
+      "memory_pct": 48.41,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 0.17,
+      "device_status": "up",
+      "throughput_mbps": 352.7
+    }
+  },
+  {
+    "device_id": "ACC_SW_HOSTEL_A",
+    "device_type": "access_switch",
+    "timestamp": "2026-10-31T10:02:00+00:00",
+    "status": "up",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 7.59,
+      "jitter_ms": 2.18,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 35.07,
+      "cpu_pct": 16.65,
+      "memory_pct": 45.44,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 0.93,
+      "device_status": "up",
+      "throughput_mbps": 350.7
+    }
+  },
+  {
+    "device_id": "ACC_SW_HOSTEL_A",
+    "device_type": "access_switch",
+    "timestamp": "2026-10-31T10:03:00+00:00",
+    "status": "up",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 11.36,
+      "jitter_ms": 3.55,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 29.72,
+      "cpu_pct": 31.67,
+      "memory_pct": 40.73,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 0.54,
+      "device_status": "up",
+      "throughput_mbps": 297.2
+    }
+  },
+  {
+    "device_id": "ACC_SW_HOSTEL_A",
+    "device_type": "access_switch",
+    "timestamp": "2026-10-31T10:04:00+00:00",
+    "status": "up",
+    "schema_version": "1.0",
+    "metrics": {
+      "bandwidth_mbps": 1000.0,
+      "latency_ms": 10.53,
+      "jitter_ms": 3.13,
+      "packet_loss_pct": 0.0,
+      "link_utilization_pct": 42.07,
+      "cpu_pct": 16.44,
+      "memory_pct": 43.85,
+      "queue_drops": 0,
+      "interface_errors": 0,
+      "retransmission_pct": 1.02,
+      "device_status": "up",
+      "throughput_mbps": 420.7
+    }
+  }
+]
