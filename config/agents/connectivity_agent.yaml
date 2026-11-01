@@ -1,0 +1,64 @@
+# NetCoop AI - Connectivity Analysis Agent Configuration
+# Dedicated tunables for topology graph analysis, upstream bottleneck identification,
+# and service-specific failure isolation.
+
+thresholds:
+  # Light check thresholds to mark a device as "affected"
+  latency_warn_ms: 80.0
+  latency_critical_ms: 200.0
+  packet_loss_warn_pct: 1.5
+  packet_loss_critical_pct: 5.0
+  utilization_warn_pct: 80.0
+  utilization_critical_pct: 90.0
+  dns_warn_ms: 150.0
+  dns_critical_ms: 1000.0
+  dhcp_warn_failures: 5
+  dhcp_critical_failures: 25
+
+graph:
+  default_uplink_id: "GW_NKN_ISP"
+  core_router_ids:
+    - "CORE_RTR_01"
+    - "CORE_RTR_02"
+  min_downstream_fraction_for_spof: 0.50
+  isolated_device_count_max: 1
+
+weights:
+  upstream_congestion:
+    upstream_high_utilization: 0.40
+    upstream_high_latency: 0.30
+    widespread_or_segment_affected: 0.20
+    upstream_not_down: 0.10
+    contradiction_upstream_down_penalty: 0.60
+    contradiction_isolated_leaf_penalty: 0.60
+    contradiction_low_utilization_penalty: 0.50
+
+  hardware_failure:
+    upstream_node_down: 0.65
+    high_downstream_unreachable: 0.25
+    upstream_degraded_critical: 0.20
+    contradiction_healthy_status_penalty: 0.70
+
+  dns_failure:
+    critical_dns_latency: 0.60
+    warn_dns_latency: 0.30
+    transport_links_healthy: 0.30
+    contradiction_transport_unhealthy_penalty: 0.40
+    contradiction_dns_healthy_penalty: 0.70
+
+  dhcp_failure:
+    critical_dhcp_failures: 0.60
+    warn_dhcp_failures: 0.30
+    transport_links_healthy: 0.30
+    contradiction_transport_unhealthy_penalty: 0.40
+    contradiction_dhcp_healthy_penalty: 0.70
+
+  normal:
+    no_affected_devices: 1.0
+    contradiction_affected_devices_penalty: 0.85
+
+confidence:
+  base_weight: 0.35
+  topology_coverage_weight: 0.35
+  completeness_weight: 0.30
+  missing_topology_penalty: 0.30

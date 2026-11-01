@@ -40,6 +40,19 @@ class MetricEvidence(BaseModel):
     interpretation: str
 
 
+class EvidenceAnswer(BaseModel):
+    """Detailed query answer observation returned by an analysis agent."""
+
+    model_config = ConfigDict(extra="ignore")
+
+    device_id: str
+    metric: str
+    value: Union[float, int, str]
+    unit: str
+    baseline: Optional[Union[float, int, str]] = None
+    interpretation: Optional[str] = None
+
+
 class HypothesisCandidate(BaseModel):
     """A root cause hypothesis candidate evaluated by an agent."""
 
@@ -65,7 +78,7 @@ class DataQuality(BaseModel):
 
     model_config = ConfigDict(extra="ignore")
 
-    completeness: float = Field(ge=0.0, le=1.0, description="Completeness score (0.0 to 1.0)")
+    completeness: float = Field(default=1.0, ge=0.0, le=1.0, description="Completeness score (0.0 to 1.0)")
     stale_fields: List[str] = Field(default_factory=list)
     missing_fields: List[str] = Field(default_factory=list)
     assumptions: List[str] = Field(default_factory=list)
@@ -81,12 +94,25 @@ class TaskRequestPayload(BaseModel):
 
     model_config = ConfigDict(extra="ignore")
 
-    task_id: str
+    task_id: Optional[str] = Field(default_factory=lambda: str(uuid.uuid4()))
+    task: str = "analyze"  # "analyze" | "correlate" | "report"
     target_device_ids: List[str] = Field(default_factory=list)
     target_segment: Optional[str] = None
     window_start: Optional[datetime] = None
     window_end: Optional[datetime] = None
     parameters: Dict[str, Any] = Field(default_factory=dict)
+
+    # Round 2 additions
+    telemetry: Optional[Dict[str, List[Dict[str, Any]]]] = None
+    topology: Optional[Dict[str, Any]] = None
+    data_quality: Optional[Union[DataQuality, Dict[str, Any]]] = None
+    findings: Optional[List[Union[Dict[str, Any], Any]]] = None
+    agent_status: Optional[Dict[str, str]] = None
+    evidence_responses: Optional[List[Union[Dict[str, Any], Any]]] = None
+    round: int = 0
+    correlation_result: Optional[Union[Dict[str, Any], Any]] = None
+    normalization_log: Optional[List[Dict[str, Any]]] = None
+    message_trace_ref: Optional[str] = None
 
 
 class FindingPayload(BaseModel):
@@ -106,8 +132,11 @@ class EvidenceQueryPayload(BaseModel):
 
     model_config = ConfigDict(extra="ignore")
 
-    query_id: str
-    requested_by: str
+    query_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    requested_by: Optional[str] = None
+    target_agent: Optional[str] = None
+    question: Optional[str] = None
+    cause_code: Optional[Union[CauseCode, str]] = None
     device_ids: List[str] = Field(default_factory=list)
     metrics: List[str] = Field(default_factory=list)
     start_time: Optional[datetime] = None
@@ -120,7 +149,12 @@ class EvidenceResponsePayload(BaseModel):
 
     model_config = ConfigDict(extra="ignore")
 
-    query_id: str
+    query_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    cause_code: Optional[Union[CauseCode, str]] = None
+    supports: Optional[bool] = None
+    confidence: Optional[float] = None
+    answers: List[Union[EvidenceAnswer, Dict[str, Any]]] = Field(default_factory=list)
+    notes: Optional[str] = None
     device_telemetry: List[Dict[str, Any]] = Field(default_factory=list)
     matched_records_count: int = 0
     data_truncated: bool = False
@@ -131,11 +165,28 @@ class ConflictNoticePayload(BaseModel):
 
     model_config = ConfigDict(extra="ignore")
 
-    conflict_id: str
+    conflict_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    rule: Optional[str] = None
+    description: Optional[str] = None
+    agents_involved: List[str] = Field(default_factory=list)
+    resolution: Optional[str] = None
     conflicting_hypotheses: List[Dict[str, Any]] = Field(default_factory=list)
     contending_agents: List[str] = Field(default_factory=list)
     disputed_metrics: List[str] = Field(default_factory=list)
     resolution_strategy: Optional[str] = None
+
+    @model_validator(mode="after")
+    def sync_conflict_fields(self):
+        """Keep Round 1 and Round 2 naming conventions synchronized."""
+        if not self.agents_involved and self.contending_agents:
+            self.agents_involved = list(self.contending_agents)
+        elif not self.contending_agents and self.agents_involved:
+            self.contending_agents = list(self.agents_involved)
+        if self.resolution and not self.resolution_strategy:
+            self.resolution_strategy = self.resolution
+        elif self.resolution_strategy and not self.resolution:
+            self.resolution = self.resolution_strategy
+        return self
 
 
 class ErrorPayload(BaseModel):
@@ -154,14 +205,19 @@ class FinalResultPayload(BaseModel):
 
     model_config = ConfigDict(extra="ignore")
 
-    incident_id: str
-    primary_root_cause: CauseCode
-    confidence: float = Field(ge=0.0, le=1.0)
+    incident_id: Optional[str] = None
+    primary_root_cause: Optional[CauseCode] = None
+    confidence: float = Field(default=0.0, ge=0.0, le=1.0)
     affected_devices: List[str] = Field(default_factory=list)
     affected_segment: Optional[str] = None
     remediation_recommendations: List[str] = Field(default_factory=list)
-    summary: str
+    summary: Optional[str] = None
     contributing_findings: List[FindingPayload] = Field(default_factory=list)
+
+    # Round 2 additions
+    stage: Optional[str] = None  # "correlation" | "report"
+    correlation_result: Optional[Union[Dict[str, Any], Any]] = None
+    report: Optional[Union[Dict[str, Any], Any]] = None
 
 
 PAYLOAD_MAP: Dict[MessageType, type[BaseModel]] = {
@@ -226,6 +282,9 @@ class MessageEnvelope(BaseModel):
     def to_dict(self) -> Dict[str, Any]:
         """Convert envelope to dictionary representation."""
         return self.model_dump(mode="json")
+
+
+Message = MessageEnvelope
 
 
 def parse_message(raw: Union[str, Dict[str, Any]]) -> MessageEnvelope:

@@ -24,3 +24,32 @@ cause_priors:
   HARDWARE_FAILURE: 0.05
   NORMAL: 0.05
   UNKNOWN: 0.0
+
+correlation_weights:
+  w1: 0.45
+  w2: 0.25
+  w3: 0.20
+  w4: 0.15
+  w5: 0.15
+
+agent_weights:
+  telemetry_agent: 1.0
+  infrastructure_agent: 1.0
+  connectivity_agent: 1.0
+
+category_thresholds:
+  high: 0.75
+  medium: 0.50
+  low: 0.30
+
+caps:
+  single_agent_support_cap: 0.60
+  low_completeness_cap: 0.55
+  completeness_threshold: 0.60
+
+margin_threshold: 0.12
+per_conflict_penalty: 0.10
+max_conflict_penalty: 0.30
+max_query_rounds: 2
+min_support_score: 0.30
+degraded_agent_penalty: 0.15

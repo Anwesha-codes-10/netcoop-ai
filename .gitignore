@@ -16,3 +16,22 @@ __pycache__/
 
 # Jupyter
 .ipynb_checkpoints/
+# Logs
+logs/
+*.log
+
+# ZIP backups and archives
+*.zip
+
+# Python packaging artifacts
+*.egg-info/
+build/
+dist/
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+
+# Accidental duplicate folder and temporary backup
+/agents/
+*.backup
