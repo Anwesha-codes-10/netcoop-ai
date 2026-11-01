@@ -1,0 +1,119 @@
+# NetCoop AI - Remediation Action Knowledge Base
+# Standardized remediation action templates and simulated execution previews for all 10 canonical cause codes.
+
+recommendations:
+  LINK_CONGESTION:
+    actions:
+      - priority: 1
+        action: "Apply egress QoS rate-limiting and buffer threshold reservation on congested interface."
+        rationale: "Mitigates buffer overflows and reduces queue drop latency spikes for real-time traffic."
+      - priority: 2
+        action: "Schedule link bandwidth capacity expansion from 10G to 20G with network operations."
+        rationale: "Relieves steady-state link bandwidth saturation under peak student traffic loads."
+    preview:
+      - "SIMULATED: Reallocate egress queue buffer threshold on saturated link."
+      - "SIMULATED: Enforce traffic policing profile for bulk background traffic."
+
+  WEAK_WIFI_SIGNAL:
+    actions:
+      - priority: 1
+        action: "Adjust 5 GHz radio transmit power (EIRP) and inspect physical antenna orientation on AP."
+        rationale: "Increases RF coverage in shadowed corridor areas and elevates client SNR."
+      - priority: 2
+        action: "Conduct physical RF site survey or deploy an additional high-density Wi-Fi 6 AP."
+        rationale: "Remediates physical structural attenuation caused by thick walls and distance."
+    preview:
+      - "SIMULATED: Increase AP radio EIRP transmit power to 20 dBm."
+      - "SIMULATED: Trigger dynamic channel re-optimization on 5 GHz radio."
+
+  INTERFACE_FAULT:
+    actions:
+      - priority: 1
+        action: "Inspect, clean, and reseat physical patch cable and optical transceiver module."
+        rationale: "Physical layer defects cause frame alignment corruption and CRC error accumulation."
+      - priority: 2
+        action: "Replace damaged Cat6 cable or migrate connection to an alternate switch port."
+        rationale: "Eliminates physical conductor degradation and restores reliable frame transmission."
+    preview:
+      - "SIMULATED: Perform digital optical monitoring (DOM) diagnostic test on transceiver."
+      - "SIMULATED: Clear interface error counters to baseline error accumulation."
+
+  DEVICE_CPU_OVERLOAD:
+    actions:
+      - priority: 1
+        action: "Apply control-plane policing (CoPP) and rate-limit rogue broadcast/multicast traffic."
+        rationale: "Prevents control plane processor starvation from runaway storm traffic."
+      - priority: 2
+        action: "Restart hung control plane daemon or schedule device reload during maintenance window."
+        rationale: "Restores normal CPU scheduling and process memory allocation."
+    preview:
+      - "SIMULATED: Apply control plane policing (CoPP) filter to drop unauthorized broadcast traffic."
+      - "SIMULATED: Terminate non-critical diagnostic logging processes on switch."
+
+  UPSTREAM_CONGESTION:
+    actions:
+      - priority: 1
+        action: "Engage NKN ISP Network Operations Center to report border gateway transit bottleneck."
+        rationale: "Upstream ISP gateway saturation requires external provider bandwidth adjustments."
+      - priority: 2
+        action: "Shift non-essential campus traffic to secondary backup ISP transit link."
+        rationale: "Balances traffic distribution across border gateway uplink pipes."
+    preview:
+      - "SIMULATED: Shift campus guest Wi-Fi subnet traffic to secondary ISP routing table."
+      - "SIMULATED: Activate border gateway BGP traffic engineering policy."
+
+  DNS_FAILURE:
+    actions:
+      - priority: 1
+        action: "Restart DNS resolution daemon (named/BIND) on primary server SRV_DNS_01."
+        rationale: "Clears stuck query worker threads and memory leaks in the DNS daemon."
+      - priority: 2
+        action: "Update campus DHCP resolver scope to point client queries to secondary DNS server."
+        rationale: "Reroutes student client name resolution away from degraded primary server."
+    preview:
+      - "SIMULATED: Restart BIND9 service daemon on primary DNS server."
+      - "SIMULATED: Flush local DNS resolution cache and verify upstream root query responses."
+
+  DHCP_FAILURE:
+    actions:
+      - priority: 1
+        action: "Expand DHCP address lease scope range and reduce lease duration on SRV_DHCP_01."
+        rationale: "Relieves subnet pool exhaustion caused by high concurrent device density."
+      - priority: 2
+        action: "Purge abandoned or expired leases from the active DHCP leasing database."
+        rationale: "Recovers dormant IP allocations for newly connecting student devices."
+    preview:
+      - "SIMULATED: Reduce DHCP client lease duration from 24 hours to 4 hours."
+      - "SIMULATED: Reclaim inactive lease reservations in hostel subnet pool."
+
+  HARDWARE_FAILURE:
+    actions:
+      - priority: 1
+        action: "Dispatch field technician to power-cycle or replace faulty switch hardware."
+        rationale: "Complete hardware crash requires on-site physical diagnostic intervention."
+      - priority: 2
+        action: "Reroute downstream VLANs through secondary redundant distribution switch."
+        rationale: "Restores network reachability via alternate topology paths."
+    preview:
+      - "SIMULATED: Activate redundant STP standby link on backup distribution switch."
+      - "SIMULATED: Dispatch hardware RMA request to vendor support."
+
+  NORMAL:
+    actions:
+      - priority: 1
+        action: "Maintain standard telemetry monitoring and periodic automated health checks."
+        rationale: "All campus network nodes and links are operating within nominal baseline parameters."
+    preview:
+      - "SIMULATED: Log healthy baseline confirmation in network monitoring system."
+
+  UNKNOWN:
+    actions:
+      - priority: 1
+        action: "Collect high-resolution packet captures and detailed device diagnostic logs."
+        rationale: "Insufficient or conflicting telemetry prevents conclusive automated diagnosis."
+      - priority: 2
+        action: "Dispatch network engineer to investigate reported incident location."
+        rationale: "Manual verification required when automated indicators are inconclusive."
+    preview:
+      - "SIMULATED: Schedule extended telemetry sampling interval on suspected devices."
+      - "SIMULATED: Trigger automated diagnostic trace collection."

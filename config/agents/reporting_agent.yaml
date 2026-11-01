@@ -1,0 +1,12 @@
+# NetCoop AI - Recommendation Reporting Agent Configuration
+# Tunables for executive reporting, evidence ordering, and remediation preview generation.
+
+max_supporting_evidence: 6
+max_alternative_causes: 3
+completeness_threshold: 0.60
+
+remediation_policy:
+  simulate_only: true
+  require_human_review: true
+
+disclaimer: "This diagnosis is generated from synthetic/supplied telemetry and requires human review and confirmation prior to operational changes."

@@ -1,0 +1,98 @@
+# NetCoop AI - Infrastructure Health Agent Configuration
+# Dedicated tunables for device health: status, cpu, memory, interface errors, queue drops, rssi, snr, retransmissions.
+
+monitored_metrics:
+  - device_status
+  - cpu_pct
+  - memory_pct
+  - interface_errors
+  - queue_drops
+  - rssi_dbm
+  - snr_db
+  - retransmission_pct
+
+detection:
+  zscore_threshold: 2.0
+  min_consecutive_sustained_samples: 2
+  flapping_transition_threshold: 2
+  unhealthy_status_fraction_threshold: 0.5
+
+  # CPU & Memory thresholds
+  cpu_warn_pct: 75.0
+  cpu_critical_pct: 90.0
+  cpu_low_threshold_pct: 50.0
+  memory_warn_pct: 80.0
+  memory_critical_pct: 90.0
+
+  # Queue drops thresholds
+  queue_drops_warn: 10
+  queue_drops_critical: 100
+  queue_drops_extreme: 2000
+
+  # Interface errors thresholds
+  interface_errors_warn: 5
+  interface_errors_critical: 50
+  interface_errors_slope_per_hour_warn: 10.0
+
+  # Wireless thresholds
+  rssi_warn_dbm: -75.0
+  rssi_critical_dbm: -85.0
+  snr_warn_db: 20.0
+  snr_critical_db: 12.0
+  retrans_warn_pct: 8.0
+  retrans_critical_pct: 20.0
+
+weights:
+  device_cpu_overload:
+    critical_cpu: 0.45
+    warn_cpu: 0.25
+    high_memory: 0.20
+    sustained_duration: 0.15
+    degraded_status: 0.10
+    contradiction_low_cpu_penalty: 0.60
+    contradiction_high_queue_drops_penalty: 0.30
+
+  interface_fault:
+    critical_interface_errors: 0.50
+    warn_interface_errors: 0.30
+    rising_errors_trend: 0.20
+    degraded_or_flapping_status: 0.15
+    wired_device: 0.15
+    contradiction_zero_errors_penalty: 0.60
+    contradiction_wireless_penalty: 0.30
+
+  hardware_failure:
+    device_down: 0.65
+    status_flapping: 0.30
+    high_downtime_fraction: 0.25
+    critical_subsystems_count_weight: 0.20
+    contradiction_healthy_status_penalty: 0.70
+
+  link_congestion:
+    critical_queue_drops: 0.50
+    warn_queue_drops: 0.30
+    normal_cpu: 0.20
+    degraded_status: 0.10
+    contradiction_zero_queue_drops_penalty: 0.60
+    contradiction_critical_cpu_penalty: 0.35
+
+  weak_wifi:
+    wireless_device: 0.25
+    critical_rssi: 0.30
+    critical_snr: 0.25
+    critical_retrans: 0.20
+    contradiction_wired_device_penalty: 0.60
+    contradiction_healthy_rf_penalty: 0.50
+
+  normal:
+    all_within_thresholds: 1.0
+    contradiction_any_critical_penalty: 0.85
+    contradiction_any_warning_penalty: 0.45
+    contradiction_unhealthy_status_penalty: 0.40
+
+confidence:
+  base_weight: 0.35
+  completeness_weight: 0.35
+  sample_count_weight: 0.30
+  min_samples_full_confidence: 5
+  single_device_max_confidence: 0.95

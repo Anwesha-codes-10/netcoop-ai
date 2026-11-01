@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "device_id": "DIST_SW_HOSTEL",
+  "timestamp": "2026-10-31T10:00:00Z",
+  "metrics": {
+    "latency_ms": 150.0,
+    "packet_loss_pct": 2.5,
+    "link_utilization_pct": 92.0
+  // MALFORMED_JSON_SYNTAX_ERROR: unclosed brace and invalid comment

@@ -1,0 +1,40 @@
+# NetCoop AI - Fault Correlation Agent Configuration
+# Tunables for multi-agent hypothesis correlation, conflict resolution, and evidence queries.
+
+cause_to_agent_map:
+  LINK_CONGESTION: "telemetry_agent"
+  WEAK_WIFI_SIGNAL: "connectivity_agent"
+  INTERFACE_FAULT: "infrastructure_agent"
+  DEVICE_CPU_OVERLOAD: "infrastructure_agent"
+  UPSTREAM_CONGESTION: "connectivity_agent"
+  DNS_FAILURE: "connectivity_agent"
+  DHCP_FAILURE: "connectivity_agent"
+  HARDWARE_FAILURE: "infrastructure_agent"
+  NORMAL: "telemetry_agent"
+
+secondary_agent_map:
+  LINK_CONGESTION: "infrastructure_agent"
+  DEVICE_CPU_OVERLOAD: "telemetry_agent"
+  UPSTREAM_CONGESTION: "telemetry_agent"
+  WEAK_WIFI_SIGNAL: "infrastructure_agent"
+  INTERFACE_FAULT: "telemetry_agent"
+
+evidence_folding:
+  support_boost: 0.15
+  refute_penalty: 0.20
+
+rules:
+  r1_multi_agent_boost: 0.10
+  r1_single_agent_penalty: 0.10
+  r2_cpu_overload_boost: 0.15
+  r2_congestion_penalty: 0.20
+  r3_upstream_boost: 0.15
+  r3_local_penalty: 0.15
+  r4_service_boost: 0.15
+  r4_congestion_penalty: 0.15
+  r5_margin_threshold: 0.12
+
+query_policy:
+  max_query_rounds: 2
+  enable_evidence_queries: true
+  min_margin_for_queries: 0.12

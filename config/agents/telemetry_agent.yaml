@@ -1,0 +1,67 @@
+# NetCoop AI - Telemetry Performance Agent Configuration
+# Dedicated tunables for latency, jitter, packet loss, throughput, bandwidth, and link utilization.
+
+monitored_metrics:
+  - latency_ms
+  - jitter_ms
+  - packet_loss_pct
+  - throughput_mbps
+  - bandwidth_mbps
+  - link_utilization_pct
+
+detection:
+  zscore_threshold: 2.0
+  spike_threshold_multiplier: 1.5
+  trend_slope_per_hour_warning: 50.0
+  trend_slope_per_hour_critical: 150.0
+  min_consecutive_anomaly_samples: 2
+  saturation_utilization_pct: 85.0
+  saturation_throughput_ratio: 0.85
+  low_utilization_threshold_pct: 50.0
+  high_utilization_threshold_pct: 80.0
+  critical_utilization_threshold_pct: 92.0
+  moderate_packet_loss_max_pct: 6.0
+  high_packet_loss_min_pct: 4.0
+  normal_loss_max_pct: 1.0
+  warning_latency_ms: 80.0
+  critical_latency_ms: 200.0
+  warning_jitter_ms: 20.0
+  critical_jitter_ms: 60.0
+
+weights:
+  link_congestion:
+    high_utilization: 0.35
+    throughput_saturation: 0.25
+    elevated_latency: 0.20
+    elevated_jitter: 0.10
+    moderate_loss: 0.10
+    contradiction_low_utilization_penalty: 0.50
+
+  weak_wifi:
+    wireless_device: 0.25
+    low_utilization: 0.20
+    elevated_loss: 0.25
+    elevated_latency_or_jitter: 0.30
+    contradiction_wired_device_penalty: 0.60
+    contradiction_high_utilization_penalty: 0.35
+
+  interface_fault:
+    wired_device: 0.25
+    high_packet_loss: 0.35
+    low_or_normal_utilization: 0.25
+    spiky_or_intermittent_loss: 0.15
+    contradiction_wireless_penalty: 0.60
+    contradiction_high_utilization_penalty: 0.35
+    contradiction_critical_latency_penalty: 0.40
+
+  normal:
+    all_within_thresholds: 1.0
+    contradiction_any_critical_penalty: 0.85
+    contradiction_any_warning_penalty: 0.45
+
+confidence:
+  base_weight: 0.35
+  completeness_weight: 0.35
+  sample_count_weight: 0.30
+  min_samples_full_confidence: 5
+  single_device_max_confidence: 0.95
