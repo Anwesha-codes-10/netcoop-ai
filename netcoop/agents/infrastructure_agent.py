@@ -943,8 +943,8 @@ class InfrastructureHealthAgent(BaseAgent):
                 all_required_observed = False
                 continue
 
-
-
+    
+ 
             if s["has_down_state"] or s["is_flapping"]:
                 has_critical = True
             elif s["downtime_frac"] > 0:

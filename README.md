@@ -4,6 +4,28 @@
 
 ---
 
+## Quick start (backend + dashboard)
+
+```bash
+pip install -r requirements.txt
+python -m netcoop.cli serve        # API + dashboard at the address it prints
+```
+
+The dashboard is a React app. Its source is in `ui/` and the **built** version is
+committed in `frontend/`, so judges do not need Node. Every number it shows comes
+from the real `/api` endpoints; there is no mock data.
+
+Change the UI:
+
+```bash
+cd ui && npm install
+npm run dev      # hot reload, proxies /api to http://127.0.0.1:8000
+npm run build    # writes ../frontend
+```
+
+`frontend-classic/` is an older dependency-free version of the dashboard (also
+shows telemetry charts and the topology map). To use it, rename it to `frontend/`.
+
 ## 📌 Round 1 Status: Foundation Layer (Complete)
 
 Round 1 establishes the rock-solid offline foundation:

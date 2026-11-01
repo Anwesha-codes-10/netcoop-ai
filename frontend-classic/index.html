@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>NetCoop AI – Network Operations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="app">
+<header>
+  <h1>NetCoop AI</h1>
+  <span class="mut">IIT Bhubaneswar campus network</span>
+  <span style="flex:1"></span>
+  <span id="hs" class="mut"><i class="dot"></i>Connecting…</span>
+</header>
+
+<aside>
+  <section>
+    <h2>Scenarios</h2>
+    <div id="scs"><span class="mut">Loading…</span></div>
+  </section>
+  <section>
+    <h2>Diagnose your own telemetry</h2>
+    <input type="file" id="file" accept=".json,application/json" class="mut" style="width:100%;margin-bottom:8px">
+    <textarea id="paste" placeholder="Or paste telemetry JSON here" spellcheck="false"></textarea>
+    <button class="btn pri" id="runPaste" style="margin-top:8px;width:100%">Diagnose telemetry</button>
+  </section>
+  <section>
+    <h2>Saved incidents</h2>
+    <div id="incs"><span class="mut">None yet</span></div>
+  </section>
+</aside>
+
+<main>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="view"></div>
+</main>
+</div>
+
+<script src="/js/config.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/ui.js"></script>
+<script src="/js/sidebar.js"></script>
+<script src="/js/views/shell.js"></script>
+<script src="/js/views/diagnosis.js"></script>
+<script src="/js/views/trace.js"></script>
+<script src="/js/views/telemetry.js"></script>
+<script src="/js/views/topology.js"></script>
+<script src="/js/views/report.js"></script>
+<script src="/js/views/benchmark.js"></script>
+<script src="/js/main.js"></script>
+</body>
+</html>

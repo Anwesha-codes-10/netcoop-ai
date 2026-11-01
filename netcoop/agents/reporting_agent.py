@@ -239,7 +239,7 @@ class RecommendationReportingAgent(BaseAgent):
 
         # Step 1: Determine final status
         has_degraded_agent = any(st.lower() in ["degraded", "timeout"] for st in agent_status.values())
-
+        
         if correlation_result.status == "insufficient_evidence":
             if completeness < self.completeness_threshold:
                 status = "partial"
@@ -252,7 +252,7 @@ class RecommendationReportingAgent(BaseAgent):
             status = "diagnosed"
 
         # Step 2: Determine root cause labels
-
+        
         if correlation_result.primary_cause_code == CauseCode.UNKNOWN:
             suspected_root_cause = "Undetermined"
             root_cause_code = CauseCode.UNKNOWN

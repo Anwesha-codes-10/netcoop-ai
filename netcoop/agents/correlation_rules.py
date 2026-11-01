@@ -231,7 +231,7 @@ def rule_near_tie_margin(
     return RuleOutcome(rule_id="R5", applied=False, description="Margin between top two candidates exceeds threshold.", effect="No adjustment.")
 
 
-
+    
 
 def apply_all_rules(
     hypotheses_scores: Dict[CauseCode, float],

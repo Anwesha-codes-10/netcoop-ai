@@ -37,8 +37,7 @@ from netcoop.protocol.messages import (
     MessageType,
     TaskRequestPayload,
 )
-from netcoop.reporting.report_models import CorrelationResult, RankedHypothesis
-
+from netcoop.reporting.report_models import CorrelationResult, RankedHypothesis
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -536,7 +535,7 @@ class FaultCorrelationAgent(BaseAgent):
             else 0.0
         )
         # 2. Cross-agent Agreement
-
+       
         # 2. Cross-agent Agreement
         # Count only agents that actually evaluate the selected cause.
         eligible_agents = set()
